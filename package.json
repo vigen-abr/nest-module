@@ -1,17 +1,19 @@
 {
   "name": "nest-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "prepublishOnly" : "npm test && npm run lint",
-    "prepare" : "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "prepare": "npm run build",
     "prepublish": "npm run format && npm version patch",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",

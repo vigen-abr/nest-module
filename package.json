@@ -9,10 +9,10 @@
   ],
   "scripts": {
     "prepublishOnly": "npm version patch",
-    "prepare": "npm run build",
     "preversion": "npm run lint && npm run format",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",

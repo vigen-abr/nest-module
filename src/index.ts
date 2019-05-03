@@ -4,10 +4,5 @@ export function findEmojis(str: string): string[] {
     return [];
   }
 
-
-
-
-
-
   return ['my-module'];
 }
